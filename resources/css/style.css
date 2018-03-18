@@ -39,17 +39,16 @@ body {
   background-size: cover;
   height: 25rem;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .newarrivalbox {
   width: 960px;
-  display: flex;
+  margin: 0 auto;
 }
 
 .newarrivaltext {
+  position: relative;
+  top: 9rem;
   background-color: black;
   width: 20rem;
   padding: 2rem 3rem;
@@ -185,8 +184,25 @@ nav a {
 
 
 @media only screen and (max-width: 460px) {
-  .products,
-  .store-info-main {
+
+  .newarrival {
+    height: 15rem;
+  }
+
+  .newarrivaltext {
+    top: 10rem;
+    padding: 1rem 2rem;
+  }
+
+  .newarrivaltext h3{
+    font-size: 0.77rem;
+  }
+
+  .newarrivaltext h1{
+    font-size: 1rem;
+  }
+
+  .products {
     flex-wrap: wrap;
   }
 
@@ -204,10 +220,19 @@ nav a {
     display: none;
   }
 
-  .location,
-  .hours {
-    width: 90%;
-    margin: 0.5rem auto;
+  .store-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .location, .hours {
+    min-width: 90%;
+  }
+
+  .loc-title, .hours-title {
+    margin: auto;
   }
 }
 
@@ -224,4 +249,10 @@ footer {
 
 .copyright {
   width: 960px;
+}
+
+@media only screen and (max-width: 460px) {
+  .copyright {
+    text-align: center;
+  }
 }
